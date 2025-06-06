@@ -1,0 +1,545 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Header and Banner Combined */
+header {
+    background: linear-gradient(rgba(41, 48, 61, 0.3), rgba(41, 48, 61, 0.3)), url('./images/Object.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 10vw;
+
+}
+
+nav img {
+    height: 32px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    opacity: 0.9;
+}
+/* Banner Content */
+main section:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+main section:first-child > div:first-child {
+    margin-bottom: 120px;
+}
+
+main section:first-child h1 {
+    font-size: 120px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+
+main section:first-child span {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 25px;
+    text-transform: uppercase;
+}
+
+main section:first-child button {
+    background: #C271FF;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.hero-content span {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+.hero-content button {
+    background-color: #C271FF;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.hero-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px 60px;
+}
+
+.hero-profiles > div {
+    max-width: 220px;
+    text-align: center;
+    color: white;
+}
+
+.hero-profiles img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.hero-profiles h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.hero-profiles p {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.7;
+}
+.testimonial {
+  width: 100%;
+  background-color: #C271FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 400px; /* or whatever height you prefer */
+}
+
+.testimonial-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: center;
+}
+
+.testimonial img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.testimonial-text blockquote {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.popular-tutorials {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F9F9F9; /* light background for contrast */
+}
+
+.popular-tutorials h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorial-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tutorial-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tutorial-card h3 {
+  font-size: 20px;
+  color: #C271FF;
+  margin-bottom: 10px;
+}
+
+.tutorial-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author h4 {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.stars {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.duration {
+  font-size: 12px;
+  color: #999;
+}
+.popular-tutorials {
+  padding: 60px 10vw;
+  text-align: center;
+}
+
+.popular-tutorials h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.tutorial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.tutorial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tutorial-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tutorial-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.tutorial-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.tutorial-card .author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tutorial-card .author img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.tutorial-card .stars {
+  display: flex;
+  gap: 5px;
+  color: #C271FF;
+  margin-top: 10px;
+}
+
+.tutorial-card .duration {
+  font-size: 12px;
+  color: #999;
+  margin-top: auto;
+}
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+}
+
+.thumbnail-container img:first-child {
+  width: 100%;
+  display: block;
+}
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px; /* set height too */
+  object-fit: contain; /* ensures the image scales nicely */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.free-membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  min-height: 100vh; /* full height */
+  padding-top: 50px; /* spacing from top */
+  text-align: center;
+}
+.membership-cards {
+  display: flex;
+  justify-content: space-between; /* or center if you want equal gaps */
+  gap: 20px;
+  flex-wrap: wrap; /* responsive wrap on smaller screens */
+  margin: 50px 0;
+}
+.membership-card {
+  text-align: center;
+  flex: 1 1 200px; /* responsive width */
+}
+.membership-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.free-membership button {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.free-membership h2 .highlight {
+  color: #C271FF;
+}
+.free-membership button {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 50px; /* <-- Fully rounded edges */
+  cursor: pointer;
+}
+.free-membership {
+  background-color: #071629;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0; /* Adjust this number to reduce vertical height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.free-membership h2 {
+  margin-bottom: 30px; /* Controls spacing under the heading */
+}
+
+.highlight {
+  color: #C271FF;
+}
+.free-membership > div {
+  margin-bottom: 90px; /* reduce as needed */
+}
+.free-membership {
+  background-color: #071629;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* horizontal centering */
+  justify-content: center;  /* vertical centering */
+  min-height: 100vh;        /* fill full viewport height */
+  text-align: center;
+  padding: 20px;
+}
+.free-membership h2 {
+  font-size: 36px; /* adjust size */
+  font-weight: 5; /* lighter font weight for "membership" */
+  color: white;
+  margin-bottom: 30px;
+}
+
+.free-membership h2 .highlight {
+  color: #C271FF;
+  font-weight: 700; /* bold for "Free" */
+}
+.free-membership {
+  padding-top: 15px;   /* Reduce top padding */
+  padding-bottom: 100px; /* Reduce bottom padding */
+}
+
+.free-membership h2 {
+  margin-top: 0;      /* Remove any top margin */
+  margin-bottom: 6%; /* Reduce bottom margin */
+}
+
+.free-membership button {
+  margin-top: 70px;   /* Reduce space above the button */
+  margin-bottom: 0;   /* Remove bottom margin */
+  padding: 14px 32px; /* Keep padding consistent */
+}
+
+section.faq {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section.faq > h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3em;
+  font-weight: 200;
+}
+
+section.faq > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+section.faq > div > div {
+  flex: 1; /* each column takes equal space */
+}
+
+section.faq h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer; /* optional for clickable questions */
+}
+
+section.faq > div > div > div:nth-child(even) {
+  margin-bottom: 100px; /* space between answers and next question */
+  color: #555; /* subtle color for answers */
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #071629;
+  color: white;
+  padding: 40px 0; /* Increased padding for more height */
+  font-family: Arial, sans-serif;
+}
+
+footer section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This centers items vertically */
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+  min-height: 80px; /* Optional: set a minimum height for better alignment */
+}
+
+footer section > div img {
+  height: 25px; /* You can slightly increase logo size too */
+}
+
+footer section > div > div {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+  color: white;
+}
+
+footer section > p {
+  text-align: center;
+  font-size: 8px;
+  color: #ccc;
+}
