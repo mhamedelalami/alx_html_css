@@ -1,0 +1,587 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #ff6b6b;
+    --text-white: #ffffff;
+    --text-light: #cccccc;
+    --dark-bg: #1a1a2e;
+    --darker-bg: #16213e;
+    --overlay-bg: rgba(26, 26, 46, 0.8);
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-size-large: 3rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 0.9rem;
+    --spacing-large: 3rem;
+    --spacing-medium: 2rem;
+    --spacing-small: 1rem;
+    --border-radius: 30px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Container */
+.header {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0); /* Set the alpha channel to 0 to remove the overlay */
+    z-index: 2;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-large);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.logo-image {
+    width: 170px; /* or any size you want */
+    height: auto; /* keeps aspect ratio */
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: var(--text-white);
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.logo-icon::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--text-white);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.logo-text {
+    color: var(--text-white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-large);
+}
+
+.nav-links a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size:12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--text-white);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    text-align: center;
+    padding: 0 var(--spacing-large);
+    z-index: 5;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 6;
+}
+
+.hero-title {
+    color: var(--text-white);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-small);
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    color: var(--text-light);
+    font-size: 16px;
+    margin-bottom: var(--spacing-large);
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: var(--primary-color);
+    color: var(--text-white);
+    padding: 15px 40px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: var(--spacing-large);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cta-button:hover {
+    background: #ff5252;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.hero-description {
+    color: var(--text-light);
+    font-size: var(--font-size-small);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Headphones Illustration */
+.headphones-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    opacity: 0.1;
+}
+
+.headphones-visual::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background: var(--text-white);
+    border-radius: 10px;
+}
+
+.headphones-visual::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background: var(--text-white);
+    border-radius: 50%;
+    box-shadow: 200px 0 0 var(--text-white);
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+    top: 20%;
+    right: 10%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+    bottom: 30%;
+    left: 8%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+    top: 60%;
+    right: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px);
+        opacity: 0.05;
+    }
+    50% { 
+        transform: translateY(-20px);
+        opacity: 0.1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --font-size-large: 2.2rem;
+        --font-size-medium: 1rem;
+        --spacing-large: 2rem;
+        --spacing-medium: 1.5rem;
+    }
+    
+    .nav {
+        padding: var(--spacing-small) var(--spacing-medium);
+    }
+    
+    .nav-links {
+        gap: var(--spacing-medium);
+    }
+    
+    .hero {
+        padding: 0 var(--spacing-medium);
+    }
+    
+    .floating-element {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-large: 1.8rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hero {
+        padding: 0 var(--spacing-small);
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+.what-we-do {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.what-we-do .description {
+    margin-bottom: 4rem; /* Space between text and icons */
+}
+
+
+.what-we-do .description p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem; /* Increase gap between features */
+    max-width: 1000px;
+}
+
+.feature {
+    flex: 1 1 200px;
+    max-width: 220px;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature i {
+    font-size: 5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Our Results Section */
+.our-results {
+    position: relative; /* Needed for background image positioning */
+    min-height: 100vh; /* Make sure it takes full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-white); /* Default text color for this section */
+    overflow: hidden; /* Hide anything that goes outside */
+}
+
+/* Background Image for Our Results Section */
+.our-results::before { /* Using ::before pseudo-element for background */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/headphones_hero_2.jpg'); /* <<< PUT YOUR PATH HERE */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Adjust brightness to make text more readable */
+    z-index: -1; /* Place it behind content */
+}
+
+.results-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+    max-width: 1000px; /* Max width for content to prevent stretching too much */
+    margin: 0 auto;
+}
+
+.results-description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px; /* Adjust as needed for the paragraph length */
+    margin: 0 auto 6rem auto; /* Center and add space below */
+    color: var(--text-light); /* Lighter text color */
+}
+
+.percentages-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 4rem; /* Space between percentage items */
+    margin-top: 2rem; /* Space from the description paragraph */
+}
+
+.percentage-item {
+    flex: 1 1 200px; /* Allows flexibility, with a base width of 200px */
+    max-width: 250px; /* Maximum width for each item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack value and text vertically */
+}
+
+.percentage-shape {
+    position: relative;
+    width: 200px; /* Adjust based on your image size */
+    height: 200px; /* Adjust based on your image size */
+    background-image: url('./images/pentagone.png'); /* <<< PUT YOUR PATH HERE */
+    background-size: cover; /* Cover the shape area */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.percentage-value {
+    font-size: 3rem; /* Size of "+2%" */
+    font-weight: bold;
+    color: var(--text-white);
+    margin-bottom: 0.5rem; /* Space between value and text */
+}
+
+.percentage-text {
+    font-size: 0.9rem;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+    .results-description {
+        margin-bottom: 2rem;
+    }
+    .percentages-container {
+        gap: 1.5rem;
+    }
+    .percentage-shape {
+        width: 150px; /* Smaller size on smaller screens */
+        height: 150px;
+    }
+    .percentage-value {
+        font-size: 2.5rem;
+    }
+    .percentage-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-results {
+        padding: 2rem 1rem;
+    }
+    .percentages-container {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        gap: 1rem;
+    }
+    .percentage-item {
+        max-width: 100%; /* Take full width when stacked */
+    }
+}
+
+/* Contact Us Section */
+.contact-us {
+    min-height: 100vh; /* Ensures it takes up at least full viewport height */
+    background-color: #ffffff; /* White background as per screenshot */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem; /* Add some padding */
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 500px; /* Controls the overall width of the form */
+    padding: 2rem;
+    text-align: center; /* Center the form elements horizontally */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1.5rem; /* Space between form groups */
+}
+
+.form-group {
+    width: 100%; /* Make each form group take full width */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Full width within its parent .form-group */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 1rem;
+    color: #333;
+    background-color: #f8f8f8; /* Very light background for inputs */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-appearance: none; /* Removes default styling for some inputs */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color); /* Highlight color on focus */
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2); /* Soft glow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing for textarea */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+/* Style for visually hidden labels (for accessibility) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Ensure the cta-button fits the form layout */
+.contact-us .cta-button {
+    width: auto; /* Let the button determine its width based on content and padding */
+    height: 44px; /* Keep height if you like it */
+    max-width: none; /* Remove any maximum width constraint that might cause wrapping */
+    margin: 0 auto;
+    padding: 15px 30px; /* Reduce horizontal padding to give more space for text */
+    font-size: 0.7rem; /* Adjust this if 0.5rem was too small; 1rem is more standard */
+    white-space: nowrap; /* Ensures the text inside the button does not wrap */
+}
